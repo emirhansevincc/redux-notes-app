@@ -4,13 +4,13 @@ import Note from '../Note/Note.jsx'
 
 import { useSelector, useDispatch } from 'react-redux'
 import { nanoid } from '@reduxjs/toolkit'
-import { addNote, clearAll } from '../../redux/notes/NoteSlice'
+import { addNote, clearAll, SELECTOR } from '../../redux/notes/NoteSlice'
 
 function NoteList() {
 
     const [textChange, setTextChange] = useState("")
 
-    const notes = useSelector((state) => state.notes.items)
+    const notes = useSelector(SELECTOR)
     const dispatch = useDispatch()
 
     const d = new Date()
