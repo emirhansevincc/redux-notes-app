@@ -8,6 +8,11 @@
 .add{
     background-color: rgba(43, 40, 40, 0.795);
     border: 2px dashed green;
+    border-radius: 12px;
+    width: 210px;
+    height: 100%;
+    padding: 10px;
+    margin: 12px;
 }
 .save-btn{
     padding: 5px;
@@ -25,6 +30,7 @@ textarea{
     border-radius: 10px;
     color: whitesmoke;
     padding: 5px;
+    width: 100%;
 }
 textarea:focus{outline: none;}
 .bottom-note{

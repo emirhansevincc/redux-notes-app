@@ -3,7 +3,7 @@ import "./note.css"
 
 function Note() {
   return (
-    <div>Note</div>
+    <div></div>
   )
 }
 

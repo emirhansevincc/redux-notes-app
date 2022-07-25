@@ -25,9 +25,9 @@ function NoteList() {
                 <div className="bottom-part">
                     <div className="note add">
                         <textarea
-                            cols="10"
+                            
                             rows="8"
-                            maxLength={220}
+                            maxLength={170}
                             placeholder='Add note'
                         ></textarea>
 
@@ -41,6 +41,7 @@ function NoteList() {
                         </div>
                     </div>
                 </div>
+
             </div>
         </>
     )
