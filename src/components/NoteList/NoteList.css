@@ -1,0 +1,50 @@
+.note-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.add{
+    background-color: rgba(43, 40, 40, 0.795);
+    border: 2px dashed green;
+}
+.save-btn{
+    padding: 5px;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    background-color: transparent;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.save-btn:hover{border: 1px solid rgb(167, 164, 164);}
+textarea{
+    border: none;
+    background-color: #222;
+    resize: none;
+    border-radius: 10px;
+    color: whitesmoke;
+    padding: 5px;
+}
+textarea:focus{outline: none;}
+.bottom-note{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.clearAll{
+    background-color: transparent;
+    border: 2px solid lightgray;
+    color: whitesmoke;
+    padding: 6px;
+    width: 50%;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+.clear-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    flex-direction: column;
+}
