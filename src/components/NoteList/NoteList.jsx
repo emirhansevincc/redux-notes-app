@@ -9,6 +9,8 @@ import { addNote, clearAll, SELECTOR } from '../../redux/notes/NoteSlice'
 function NoteList() {
 
     const [textChange, setTextChange] = useState("")
+    const [backgroundColor, setBackgroundColor] = useState("")
+    // console.log(backgroundColor);
 
     const notes = useSelector(SELECTOR)
     const dispatch = useDispatch()
@@ -17,9 +19,14 @@ function NoteList() {
 
     const handleClick = () => {
 
-        if( !textChange ) return
+        if (!textChange) return
         dispatch(addNote(
-            { id: nanoid(), text: textChange, date: d.getDay() }
+            { 
+                id: nanoid(), 
+                text: textChange, 
+                date: d.getDay(),
+                backgroundColor: backgroundColor
+            }
         ))
         setTextChange("")
     }
@@ -32,8 +39,8 @@ function NoteList() {
                 <h1>NOTES</h1>
                 <button
                     className='clearAll'
-                    onClick={() => {dispatch(clearAll())}}
-                    >Clear All</button>
+                    onClick={() => { dispatch(clearAll()) }}
+                >Clear All</button>
             </div>
 
             <div className='note-container'>
@@ -48,23 +55,43 @@ function NoteList() {
                     <div className="note add">
                         <textarea
                             rows="8"
-                            maxLength={170}
+                            maxLength={150}
                             placeholder='Add note'
                             value={textChange}
                             onChange={(e) => setTextChange(e.target.value)}
                         ></textarea>
 
                         <div className="bottom-note">
-                            <div className="date">
-                                <span>{d.toDateString()}</span>
-                            </div>
-                            <div className="delete">
-                                <button 
-                                    className='save-btn'
-                                    onClick={handleClick}
+                            <div className='date-save'>
+                                <div className="date">
+                                    <span>{d.toDateString()}</span>
+                                </div>
+                                <div>
+                                    <button
+                                        className='save-btn'
+                                        onClick={handleClick}
                                     >Save
-                                </button>
+                                    </button>
+                                </div>
                             </div>
+
+                            <div className='colors'>
+
+                                <button 
+                                    className='blue'
+                                    onClick={() => setBackgroundColor("blue")}
+                                    >Blue</button>
+                                <button 
+                                    className='red'
+                                    onClick={() => setBackgroundColor("red")}
+                                    >Red</button>
+                                <button 
+                                    className='green'
+                                    onClick={() => setBackgroundColor("green")}
+                                    >Green</button>
+
+                            </div>
+
                         </div>
                     </div>
                 </div>

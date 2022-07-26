@@ -21,6 +21,7 @@
     background-color: transparent;
     border-radius: 12px;
     cursor: pointer;
+    margin-left: 30px;
 }
 .save-btn:hover{border: 1px solid rgb(167, 164, 164);}
 textarea{
@@ -35,8 +36,15 @@ textarea{
 textarea:focus{outline: none;}
 .bottom-note{
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.date-save{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;    
 }
 .clearAll{
     background-color: transparent;
@@ -53,4 +61,43 @@ textarea:focus{outline: none;}
     justify-content: center;
     margin-top: 20px;
     flex-direction: column;
+}
+.colors{
+    padding-top: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.colors button{
+    padding: 5px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 10px;
+}
+.blue{
+    background-color: rgb(47, 47, 168);
+    color: #fff;
+    cursor: pointer;
+}
+.red{
+    background-color: rgb(168, 47, 47);
+    color: #fff;
+    cursor: pointer;
+}
+.green{
+    background-color: rgb(53, 168, 47);
+    color: #fff;
+    cursor: pointer;
+}
+
+#blue{
+    background-color: rgb(47, 47, 168);
+    color: #fff;
+}
+#red{
+    background-color: rgb(168, 47, 47);
+    color: #fff;
+}
+#green{
+    background-color: rgb(53, 168, 47);
+    color: #fff;
 }

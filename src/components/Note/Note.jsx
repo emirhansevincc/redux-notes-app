@@ -14,7 +14,7 @@ function Note({ note }) {
   }
 
   return (
-    <div className="note">
+    <div className="note" id={note.backgroundColor}>
       <p>{note.text}</p>
       <div className="bottom-part">
         <div className="date">

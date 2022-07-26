@@ -7,17 +7,20 @@ export const noteSlice = createSlice({
             {
                 id: nanoid(),
                 text: 'First note',
-                date: '22/07/2092'
+                date: '22/07/2092',
+                backgroundColor: 'red'
             },
             {
                 id: nanoid(),
                 text: 'Second note',
-                date: '23/07/2092'
+                date: '23/07/2092',
+                backgroundColor: 'blue'
             },
             {
                 id: nanoid(),
                 text: 'Third note',
-                date: '24/07/2092'
+                date: '24/07/2092',
+                backgroundColor: 'green'
             },
         ]
     },
@@ -32,7 +35,7 @@ export const noteSlice = createSlice({
         },
         clearAll: (state) => {
             state.items = []
-        }
+        },
     }
 })
 
